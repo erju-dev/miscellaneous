@@ -36,7 +36,7 @@ def movement(user_row, user_col, exit_col, exit_row, board, lenght):
     if position in available:
         if position == "N":
             if (user_row - 1) < 0:
-                print("\nFora del taulell")
+                print("\nOut of board")
                 return movement(user_row, user_col, board, lenght)
             else:
                 user_row -= 1
@@ -50,14 +50,14 @@ def movement(user_row, user_col, exit_col, exit_row, board, lenght):
                 user_col += 0
         elif position == "E":
             if (user_col + 1) >= lenght:
-                print("\nFora del taulell")
+                print("\nOut of board")
                 return movement(user_row, user_col, board, lenght)
             else:
                 user_row += 0
                 user_col += 1
         else:  # pos = "O"
             if (user_col - 1) < 0:
-                print("\nFora del taulell")
+                print("\nOut of board")
                 return movement(user_row, user_col, board, lenght)
             else:
                 user_row += 0
@@ -68,12 +68,12 @@ def movement(user_row, user_col, exit_col, exit_row, board, lenght):
         else:
             return user_row, user_col
     else:
-        print("Posicio incorrecta [N, S, E, O]")
+        print("Incorrect position [N, S, E, O]")
         return movement(user_row, user_col, board, lenght)
 
 
 def question(n: int):
-    # 100 preguntes by ChatGPT
+    # 100 questions by ChatGPT
     quest = [
         ["¿Quién escribió 'Cien años de soledad'?", "García Márquez"],
         ["¿Cuál es la capital de Japón?", "Tokio"],
@@ -148,21 +148,21 @@ def question(n: int):
         ["¿Quién fue el famoso físico británico conocido por su teoría de la relatividad general?", "Stephen Hawking"],
         ["¿En qué año se celebró la primera Olimpiada moderna?", "1896"]]
 
-    print("\nResol la seguent pregunta per avançar!\n")
+    print("\nAnswer below question!\n")
     print("-" * 15)
     q = input(f"{quest[n][0]}   \n")
     print("-" * 15)
     if q.lower() == quest[n][1].lower():
         return
     else:
-        print("\n🛑 Resposta incorrecta!")
+        print("\n🛑 Wrong answer!")
         return question(random.randint(0, 20))
 
 
 def exit_game():
     print()
     print("🎊" * 9)
-    print("  Has guanyat!!")
+    print("  You rock!!")
     print("🎊" * 9)
     sys.exit()
 
