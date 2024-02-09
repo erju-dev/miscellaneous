@@ -30,11 +30,7 @@ def show_board(board: list):
 def movement(user_row, user_col, exit_col, exit_row, board, lenght):
     board[user_row][user_col] = "⬜️"
     available = ["N", "S", "E", "O"]
-<<<<<<< HEAD
     position = input("\nWhere would you like to go? [N, S, E, O]  ")
-=======
-    position = input("\nOn vols anar? [N, S, E, O]  ")
->>>>>>> dbd1778c468a316704199552a9750d8580a601ad
     position = position.upper()
 
     if position in available:
