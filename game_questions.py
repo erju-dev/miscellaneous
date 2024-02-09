@@ -1,4 +1,4 @@
-# LIBRARIES testing
+# LIBRARIES
 
 import random
 import os
