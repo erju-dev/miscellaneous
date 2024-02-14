@@ -3,7 +3,6 @@ import sys
 
 def substituir(text, paraula):
     tamany = len(paraula)
-    #print (tamany)
     subs = ""
     for s in range(tamany):
         subs = subs + "*"
