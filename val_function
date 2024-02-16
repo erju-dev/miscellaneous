@@ -1,0 +1,24 @@
+# Libraries
+
+# Functions
+def val(num, products):
+    return ''.join(product for price, product in products
+                   if num % price == 0) or f"Any price product are multiple of {num}"
+
+# Main
+if __name__ == "__main__":
+    print("Start program")
+    print("Calling function...")
+
+    products = [   # list of tuples (price + product)
+                    (3, "milk"),
+                    (5.3, "butter"),
+                    (2, "cheese")
+                ]
+
+    for price,product in products:
+        print(price, "\t", product)
+    print()
+
+    print(val(4, products))
+    print(val(4.5, products))
