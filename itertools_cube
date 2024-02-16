@@ -1,0 +1,19 @@
+# Libraries
+from itertools import product as itertools_product
+from scipy.spatial.distance import cityblock
+from random import choice
+
+# Functions
+
+# Main
+if __name__ == "__main__":
+    r = range(3)
+    #print(r)
+    cubes = list(itertools_product(r,r,r))
+    #print(cubes)
+
+    mycube = choice(cubes)
+    print(f"Chosen cube = {mycube}\n")
+
+    for cube in cubes:
+        print(f"{cube} > {cityblock (mycube, cube)}")
