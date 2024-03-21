@@ -1,0 +1,24 @@
+# Libraries
+import sys
+import os
+
+# Functions
+def reverse(word):
+    new_word = []
+    #print(len(word))
+    for cursor in range(1, len(word) + 1):
+        #print(cursor)
+        #print(word[-cursor])
+        new_word.append(word[-cursor])
+    #print(new_word, type(new_word))
+    #new_word = "".join(new_word)
+    #print(new_word, type(new_word))
+    return "".join(new_word)
+
+# Main
+if __name__ == "__main__":
+    os.system("cls")
+    word = input("Type a word: ")
+    print(f"\nword you typed is {word}")
+    word_reverse = reverse(word)
+    print(f"and reversed is {word_reverse}")
